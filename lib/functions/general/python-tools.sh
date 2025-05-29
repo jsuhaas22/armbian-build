@@ -126,7 +126,7 @@ function prepare_python_and_pip() {
 
 		# Install pip, using get-pip.py; that bootstraps pip using an embedded, temporary, pip contained in get-pip.py
 		display_alert "Installing pip using get-pip.py" "${pip3_version_number}" "info"
-		run_host_command_logged env -i "${PYTHON3_VARS[@]@Q}" "${PYTHON3_INFO[BIN]}" "${PYTHON3_INFO[GET_PIP_BIN]}" "${pip3_extra_args[@]}" "pip==${pip3_version_number}"
+		run_host_command_logged env -i "${PYTHON3_VARS[@]@Q}" "${PYTHON3_INFO[BIN]}" "${PYTHON3_INFO[GET_PIP_BIN]}" "${pip3_extra_args[@]}" "pip"
 
 		# Install the dependencies
 		display_alert "Installing Python dependencies" "from ${python3_pip_dependencies_path}" "info"
